@@ -1,0 +1,73 @@
+public class StringReplace {
+
+	String myReplace(String val ,char k , char l)	{
+	
+	
+char[] chars = val.toCharArray();
+
+for(int i=0;i<chars.length;i++)
+{
+	
+if(chars[i]==k)
+{
+	
+	 chars[i]=l	;
+	
+}
+
+}
+return String.valueOf(chars);
+}
+
+	String myFirst(String val1 ,char k1 , char l1)
+	{
+		char[] chars1 = val1.toCharArray();
+
+		for(int i=0;i<chars1.length;i++)
+		{
+			
+		if(chars1[i]==k1)
+		{
+			
+			 chars1[i]=l1	;
+			break;
+		}
+
+		}
+		return String.valueOf(chars1);
+		}
+		
+	String mySecond(String val2 ,char k2 , char l2)
+	{
+		char[] chars2 = val2.toCharArray();
+
+		for(int i=chars2.length-1;i>=0;i--)
+		{
+			
+		if(chars2[i]==k2)
+		{
+			
+			 chars2[i]=l2	;
+			 break;
+			
+		}
+
+		}
+		return String.valueOf(chars2);
+		}
+		
+	
+public static void main(String[] args) {
+	
+	StringReplace o=new StringReplace();
+	System.out.println(o.myReplace("Amrutha" ,'t' , 's'));
+	
+System.out.println(o.myFirst("Hello" ,'l' , 'k'));
+System.out.println(o.mySecond("Hello" ,'l' , 'k'));
+   
+}
+
+
+}
+
+
